@@ -3,12 +3,10 @@ from django.views.generic.edit import CreateView
 from .models import blogs
 from django.http import HttpResponse,HttpResponseRedirect
 
-# Create your views here.
-def index(request):
-	return render(request,'blog_menu.html')
 
 def addblog(request):
 	return render(request,'addblog.html',{})
+
 
 def save(request):
 	Author=request.POST.get('author')
@@ -19,6 +17,7 @@ def save(request):
 	blog.save()
 	return HttpResponseRedirect("/")
 
+
 def read(request):
 	all_blogs=blogs.objects.all()
 	for blog in all_blogs:
@@ -26,6 +25,7 @@ def read(request):
 		print(blog.Author)
 		print(blog.Blog)
 	return render(request,"readblogs.html",{'Blogs':all_blogs})
+
 
 class Blogs_view(CreateView):	
 	model=blogs

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<form method="POST" action="{% url "signup" %}" class="jumbotron">
+	{% csrf_token %} 
+	<div class="row">
+		<div class="col-sm-6 text-center">
+			<label for="Author_name" class="label label-info">User Name</label>
+		</div>
+		<div class="col-sm-6">
+		<input type="text" id="Author_name" name="username" required>	
+		</div>		
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-sm-6 text-center">
+			<label for="userid" class="label label-info">UserID</label>
+		</div>
+		<div class="col-sm-6">
+			<input type="text" id="userid" name="userid" required>
+		</div>	
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-sm-6 text-center" >
+			<label for="dob" class="label label-info">DOB</label>
+		</div>
+		<div class="col-sm-6">
+			<input type="date" id="dob" name="dob" required>
+	    </div>
+	</div>
+    <br>
+	<div class="row">
+		<div class="col-sm-6 text-center"><label for="pwd" class="label label-info">Password</label>
+		</div>
+		<div class="col-sm-6">
+			<input type="Password" id="pwd" name="password" required>
+	    </div>	
+	</div>
+    <br>
+	<div class="row">
+		<div class="col-sm-6 text-center">
+			<label for="repwd" class="label label-info">Re-enter Password</label>
+		</div>
+		<div class="col-sm-6">
+			<input type="Password" id="repwd" name="repwd" required>
+	    </div>	
+	</div>
+	<br>
+	
+   <button type="submit" class="btn btn-success btn-lg text-center" style="margin-left: 450px;">Sign_up</button>
+      <button type="Reset" class="btn btn-danger btn-lg text-center" style="margin-left: 150px;">Reset</button>
+</form>
+{% endblock %}

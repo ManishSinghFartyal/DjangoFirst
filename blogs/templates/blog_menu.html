@@ -1,7 +1,16 @@
 {% extends 'base.html'%}
 {% block content %}
-<a href="blog/addblog">Add blogs</a>
-<br>
-<br>
-<a href="blog/read">Read blogs</a>
+{% load staticfiles %}
+<div class="row">
+
+<div class="jumbotron col-lg-5">
+	<div class="col-lg-3 btn-link btn-success text-center btn-lg"><a href="blog/addblog">Add blogs</a></div>
+	<br>
+	<br>
+	<div class="col-lg-3 btn-link text-center btn-info  btn-lg"><a href="blog/read">Read blogs</a></div>	
+</div>
+<div class="col-lg-7">	
+<img src={% static "logo.jpg" %} alt="" width="90%" height="90%">
+</div>	
+</div>
 {% endblock %}

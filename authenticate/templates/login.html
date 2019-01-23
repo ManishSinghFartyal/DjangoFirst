@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<form method="POST" action="{% url "login_user" %}" class="jumbotron">
+	{% csrf_token %} 	
+	<div class="row">
+		<div class="col-sm-6 text-center">
+			<label for="userid" class="label label-info">UserID</label>
+		</div>
+		<div class="col-sm-6">
+			<input type="text" id="userid" name="userid" required>
+		</div>	
+	</div>
+	<br>	
+    <br>
+	<div class="row">
+		<div class="col-sm-6 text-center"><label for="pwd" class="label label-info">Password</label>
+		</div>
+		<div class="col-sm-6">
+			<input type="Password" id="pwd" name="password" required>
+	    </div>	
+	</div>    
+	<br>
+	
+   <button type="submit" class="btn btn-success btn-lg text-center" style="margin-left: 450px;">Login</button>
+      <button type="Reset" class="btn btn-danger btn-lg text-center" style="margin-left: 150px;">Reset</button>
+</form>
+{% endblock %}

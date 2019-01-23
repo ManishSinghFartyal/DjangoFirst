@@ -1,20 +1,31 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
-<form method="POST" action="save/">
-	{% csrf_token %} 
-<label for="Author_name">Author_name</label>
-<input type="text" id="Author_name" name="author">
-<br>
-<br>
-<label for="title">Title</label>
-<input type="text" id="title" name="title">
-<br>
-<br>
-<label for="article">Compose</label>
-<textarea rows="20" cols="50" id="article" name="article"></textarea>>
-<br> 
-<br>
-<button type="submit">Submit</button>
 
-<button type="submit" class="btn btn-success btn-lg">Submit</button>
+
+<form method="POST" action="save/" class="jumbotron">
+	{% csrf_token %} 
+	<div class="row">
+		<div class="col-sm-6 text-center">
+		<label for="Author_name">Author_name</label>	
+		</div>
+		<div class="col-sm-6">
+		<input type="text" id="Author_name" name="author">	
+		</div>		
+	</div>
+	<br>
+		<div class="row">
+		<div class="col-sm-6 text-center"><label for="title" class="label top-left">Title</label></div>
+		<div class="col-sm-6"><input type="text" id="title" name="title">		</div>	
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-sm-6 text-center"><label for="article">Compose</label></div>
+		<div class="col-sm-6"><textarea rows="15" cols="50" id="article" name="article"></textarea>		
+	</div>	
+	</div>
+	<br>
+   <button type="submit" class="btn btn-success btn-lg text-center" style="margin-left: 450px;">Submit</button>
+      <button type="Reset" class="btn btn-danger btn-lg text-center" style="margin-left: 150px;">Reset</button>
 </form>
 {% endblock %}
