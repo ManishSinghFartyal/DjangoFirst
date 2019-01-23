@@ -21,5 +21,6 @@ urlpatterns = [
     path('',include('blogs.urls')),
     path('addblog/',include('blogs.urls')),
     path('save/',include('blogs.urls')),
-    path('blog/',include('blogs.urls'))       
+    path('blog/',include('blogs.urls')),
+    path('read/',include('blogs.urls'))         
 ]

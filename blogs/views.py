@@ -19,6 +19,14 @@ def save(request):
 	blog.save()
 	return HttpResponseRedirect("/")
 
+def read(request):
+	all_blogs=blogs.objects.all()
+	for blog in all_blogs:
+		print(blog.Title)
+		print(blog.Author)
+		print(blog.Blog)
+	return render(request,"readblogs.html",{'Blogs':all_blogs})
+
 class Blogs_view(CreateView):	
 	model=blogs
 	fields=['Title','Blog','Author']
