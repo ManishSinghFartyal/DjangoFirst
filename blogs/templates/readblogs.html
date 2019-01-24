@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+{% if not Blogs %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="alert alert-danger text-center h1">
+	<strong>No blog found!!</strong>
+	<a href="{% url "addblog" %}">Post a blog</a>
+</div>
+{% endif %}
 {% for key,value in Blogs.items %}    
+
 <div class="row jumbotron text-center">
 	<h1>Author name : {{ value.Author }}</h1>	
 	<h3>Title : {{ value.title }}</h3>

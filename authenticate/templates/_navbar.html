@@ -15,9 +15,13 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {% if 'userid' not in request.session %}
+
         <li><a href="{%url 'register'%}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>  
         <li><a href="{%url 'login'%}"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-        {% else %}        
+        {% else %} 
+         <li><a href="{%  url "addblog" %}">Add article</a></li>
+        <li><a href="{% url "readmyblog" category='my' %}">Your Articles</a></li> 
+        <li><a href="{% url "readmyblog" category='all' %}">Read Articles</a></li>      
         <li><a href="{%url 'logout'%}"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
         {% endif %}
         </li>
