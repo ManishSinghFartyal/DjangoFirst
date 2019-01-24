@@ -7,6 +7,15 @@
 <br>
 <form method="POST" action="{% url "login_user" %}" class="jumbotron">
 	{% csrf_token %} 	
+	{% if messages %}
+		<div class="row text-center">
+			<div class="alert alert-danger">
+				{% for message in messages %}	
+						<h5><strong>{{message}}</strong></h5>	
+				{% endfor %}
+			</div>	   
+	{% endif %}
+	</div>
 	<div class="row">
 		<div class="col-sm-6 text-center">
 			<label for="userid" class="label label-info">UserID</label>

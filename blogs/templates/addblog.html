@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-
-
+<br>
+<br>
+<br>
 <form method="POST" action="save/" class="jumbotron">
 	{% csrf_token %} 
-	<div class="row">
+	<div class="row h4">
 		<div class="col-sm-6 text-center">
 		<label for="Author_name">Author_name</label>	
 		</div>
@@ -14,12 +15,12 @@
 		</div>		
 	</div>
 	<br>
-		<div class="row">
-		<div class="col-sm-6 text-center"><label for="title" class="label top-left">Title</label></div>
+		<div class="row h4">
+		<div class="col-sm-6 text-center"><label for="title" >Title</label></div>
 		<div class="col-sm-6"><input type="text" id="title" name="title">		</div>	
 	</div>
 	<br>
-	<div class="row">
+	<div class="row h4">
 		<div class="col-sm-6 text-center"><label for="article">Compose</label></div>
 		<div class="col-sm-6"><textarea rows="15" cols="50" id="article" name="article"></textarea>		
 	</div>	

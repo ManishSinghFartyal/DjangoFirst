@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for blog in Blogs %}
+{% for key,value in Blogs.items %}    
 <div class="row jumbotron text-center">
-	<h1>Author name : {{ blog.Author }}</h1>	
-	<h3>Title : {{ blog.Title }}</h3>
-	<p class="lead">Article :{{ blog.Blog }}</p>
+	<h1>Author name : {{ value.Author }}</h1>	
+	<h3>Title : {{ value.title }}</h3>
+	<p class="lead">Article :{{ value.Blog }}</p>
+	<h6>Created on : {{ value.Date }}</h6>
+	<div class="jumbotron-fluid">
+		<h3>Related links@:</h3>
+		{% for k,v in value.Links.items  %}
+			<a href="https:/www.google.com/{{v}}" class="btn-link h4">{{k}}</a>
+			<br>
+		{% endfor %}
+	</div>
 </div>
+
 {% endfor %}
 <a href="/">Go Home</a>
 

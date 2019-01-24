@@ -1,13 +1,17 @@
 {% extends 'base.html'%}
 {% block content %}
 {% load staticfiles %}
-<div class="row">
+<br>
+<br>
+<div class="jumbotron">
 
-<div class="jumbotron col-lg-5">
-	<div class="col-lg-3 btn-link btn-success text-center btn-lg"><a href="blog/addblog">Add blogs</a></div>
+<div class="jumbotron col-lg-5 h2">
+	<div class="col-lg-5 btn-link text-center btn-success btn-lg"><a href="addblog" class="h2">Add blogs</a></div>
 	<br>
 	<br>
-	<div class="col-lg-3 btn-link text-center btn-info  btn-lg"><a href="blog/read">Read blogs</a></div>	
+	<br>
+	<br>
+	<div class="col-lg-5 btn-link text-center btn-info  btn-lg"><a href="read" class="h2">Read blogs</a></div>	
 </div>
 <div class="col-lg-7">	
 <img src={% static "logo.jpg" %} alt="" width="90%" height="90%">
