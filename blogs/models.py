@@ -8,3 +8,4 @@ class blogs(models.Model):
 	Blog = models.TextField()
 	Author = models.CharField(max_length=200)
 	Created_date =models.DateTimeField(default=timezone.now)
+	Image=models.ImageField(upload_to='static/blog_image',default='NoImage.png')

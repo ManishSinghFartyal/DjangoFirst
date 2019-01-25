@@ -40,7 +40,11 @@ INSTALLED_APPS = [
     'blogs',
     'crispy_forms',
     'authenticate',
+
 ]
+
+SESSION_EXPIRE_SECONDS=10000
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY=True
 
 CRISPY_TEMPLATE_PACK='bootstarp4'
 
@@ -52,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
 ]
 
 ROOT_URLCONF = 'Mypro2.urls'

@@ -4,7 +4,7 @@
 <br>
 <br>
 <br>
-<form method="POST" action="save/" class="jumbotron">
+<form method="POST" action="save/" class="jumbotron"  enctype="multipart/form-data">
 	{% csrf_token %} 
 	<div class="row h4">
 		<div class="col-sm-6 text-center">
@@ -23,6 +23,12 @@
 	<div class="row h4">
 		<div class="col-sm-6 text-center"><label for="article">Compose</label></div>
 		<div class="col-sm-6"><textarea rows="15" cols="50" id="article" name="article"></textarea>		
+	</div>	
+	<div class="row h4">
+		<div class="col-sm-6 text-center"><label for="image">Add image for blog : </label></div>
+		<div class="col-sm-6">
+			<input type="file" name="image" id="image">
+		</div>
 	</div>	
 	</div>
 	<br>
