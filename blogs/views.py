@@ -74,7 +74,7 @@ def read_my(request,category):
 			res=fetch_result(str1,4)
 			#print(str1,"\n related links")
 			img=str(blog.Image)
-			img_url=img[7:]
+			img_url=img
 			print(img_url)	
 
 			new_dics[blog.id]={'image':img_url,'title':blog.Title,'Blog':blog.Blog,'Author':blog.Author,'Date':blog.Created_date,'Links':res}					
